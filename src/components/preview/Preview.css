@@ -1,0 +1,10 @@
+.preview {
+  width: 210mm;
+  height: 297mm;
+  flex-shrink: 0;
+  background-color: #fff;
+  position: sticky;
+  top: 2rem;
+  border-radius: 2px;
+  padding: 6rem 4rem;
+}

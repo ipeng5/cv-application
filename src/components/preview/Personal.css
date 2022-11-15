@@ -1,0 +1,39 @@
+.personal {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal h2 {
+  border: none;
+  margin: 0;
+}
+
+.personal p {
+  margin-bottom: 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary {
+  border-top: 3px solid var(--color-primary);
+  padding: 2rem 0 1rem 0;
+  margin-top: 1rem;
+}
+
+.contact {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.contact img {
+  width: 18px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,0 +1,90 @@
+.btn-add,
+.btn-delete {
+  padding: 6px 12px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-add {
+  color: var(--color-text-light);
+  margin-top: 1rem;
+  background-color: var(--color-btn-bg);
+  font-size: 1.8rem;
+}
+.btn-add:hover {
+  background-color: var(--color-primary);
+}
+
+.btn-delete {
+  color: var(--color-input-bg);
+  background-color: transparent;
+  font-size: 3rem;
+}
+
+.btn-delete:hover {
+  color: var(--color-primary-btn);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+input,
+textarea {
+  background-color: var(--color-input-bg);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 4px;
+  padding: 8px;
+  outline: none;
+  font-size: 1.8rem;
+  width: 99%;
+}
+
+textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+.input-form {
+  width: 210mm;
+  flex-shrink: 0;
+  background-color: var(--color-form-bg);
+  border-radius: 2px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem 6rem 3rem;
+}
+
+.input-form h2 {
+  border: none;
+  margin-bottom: 0.8rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-subhead {
+  display: flex;
+}
+
+.section-subhead input:first-child {
+  min-width: 30.42rem;
+}
+
+::placeholder {
+  color: var(--color-text-light);
+  font-size: 1.6rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
