@@ -14,7 +14,7 @@ function App() {
       linkedIn: '',
       summary: '',
     },
-    skillsData: [],
+    skillsData: [{ id: nanoid(), skill: '' }],
     experienceData: [
       {
         id: nanoid(),
@@ -44,6 +44,30 @@ function App() {
     }));
   };
 
+  const handleAddSkills = () => {
+    setCvData(prevCvData => ({
+      ...prevCvData,
+      skillsData: [...prevCvData.skillsData, { id: nanoid(), skill: '' }],
+    }));
+  };
+
+  const handleDeleteSkills = id => {
+    setCvData(prevCvData => {
+      const updatedSkills = prevCvData.skillsData.filter(skill => skill.id !== id);
+      return { ...prevCvData, skillsData: updatedSkills };
+    });
+  };
+
+  const handleChangeSkills = (e, id) => {
+    setCvData(prevCvData => {
+      const updatedSkills = prevCvData.skillsData.map(skillItem => {
+        if (skillItem.id === id) return { ...skillItem, skill: e.target.value };
+        return skillItem;
+      });
+      return { ...prevCvData, skillsData: updatedSkills };
+    });
+  };
+
   const handleAddExperience = () => {
     setCvData(prevCvData => ({
       ...prevCvData,
@@ -65,9 +89,7 @@ function App() {
     const { name, value } = e.target;
     setCvData(prevCvData => {
       const updatedExperience = prevCvData.experienceData.map(exp => {
-        if (exp.id === id) {
-          return { ...exp, [name]: value };
-        }
+        if (exp.id === id) return { ...exp, [name]: value };
         return exp;
       });
       return { ...prevCvData, experienceData: updatedExperience };
@@ -79,6 +101,9 @@ function App() {
       <InputForm
         cvData={cvData}
         onChangePersonal={handleChangePersonal}
+        onAddSkills={handleAddSkills}
+        onDeleteSkills={handleDeleteSkills}
+        onChangeSkills={handleChangeSkills}
         onAddExperience={handleAddExperience}
         onDeleteExperience={handleDeleteExperience}
         onChangeExperience={handleChangeExperience}

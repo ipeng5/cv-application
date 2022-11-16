@@ -8,9 +8,9 @@ export default function Preview(props) {
   return (
     <div className="preview">
       <Personal cvData={props.cvData} />
-      <Skills />
+      <Skills cvData={props.cvData} />
       <Experience cvData={props.cvData} />
-      <Education />
+      <Education cvData={props.cvData} />
     </div>
   );
 }

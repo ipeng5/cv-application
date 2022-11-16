@@ -9,10 +9,7 @@ export default function ExperienceItem(props) {
           value={props.experienceItem.title}
           onChange={e => props.onChange(e, props.id)}
         />
-        <button
-          className="btn-delete"
-          onClick={() => props.onDelete(props.id)}
-          onChange={e => props.onChange(e, props.id)}>
+        <button className="btn-delete" onClick={() => props.onDelete(props.id)}>
           &#215;
         </button>
       </div>

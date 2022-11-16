@@ -8,7 +8,12 @@ export default function InputForm(props) {
   return (
     <div className="input-form">
       <InputPersonal cvData={props.cvData} onChangePersonal={props.onChangePersonal} />
-      <InputSkills />
+      <InputSkills
+        cvData={props.cvData}
+        onAddSkills={props.onAddSkills}
+        onDeleteSkills={props.onDeleteSkills}
+        onChangeSkills={props.onChangeSkills}
+      />
       <InputExperience
         cvData={props.cvData}
         experienceData={props.experienceData}

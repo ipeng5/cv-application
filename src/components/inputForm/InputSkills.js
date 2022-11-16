@@ -1,14 +1,25 @@
-export default function InputSkills() {
+export default function InputSkills(props) {
   return (
-    <form className="input-section">
+    <div className="input-section">
       <div className="section-head">
         <h2>Skills</h2>
-        <button className="btn-add">&#43;&nbsp;&nbsp;Add</button>
+        <button className="btn-add" onClick={props.onAddSkills}>
+          &#43;&nbsp;&nbsp;Add
+        </button>
       </div>
-      <div className="section-head">
-        <input type="text" placeholder="Skill" />
-        <button className="btn-delete">&#215;</button>
-      </div>
-    </form>
+      {props.cvData.skillsData.map(skillItem => (
+        <div className="section-head" key={skillItem.id}>
+          <input
+            type="text"
+            placeholder="Skill"
+            value={skillItem.skill}
+            onChange={e => props.onChangeSkills(e, skillItem.id)}
+          />
+          <button className="btn-delete" onClick={() => props.onDeleteSkills(skillItem.id)}>
+            &#215;
+          </button>
+        </div>
+      ))}
+    </div>
   );
 }

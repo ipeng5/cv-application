@@ -1,15 +1,13 @@
 import './Skills.css';
 
-export default function Skills() {
+export default function Skills(props) {
   return (
     <div>
       <h2>Skills</h2>
       <div className="skill-item">
-        <p>Digital marketing</p>
-        <p>Dynamic configuration</p>
-        <p>Product functionality</p>
-        <p>skill1</p>
-        <p>skill1</p>
+        {props.cvData.skillsData.map(skillItem => (
+          <p key={skillItem.id}>Marketing{skillItem.skill}</p>
+        ))}
       </div>
     </div>
   );

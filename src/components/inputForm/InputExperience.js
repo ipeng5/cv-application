@@ -4,12 +4,13 @@ export default function InputExperience(props) {
   const experienceItems = props.cvData.experienceData.map(experienceItem => (
     <InputExperienceItem
       key={experienceItem.id}
-      onDelete={props.onDeleteExperience}
       id={experienceItem.id}
       experienceItem={experienceItem}
+      onDelete={props.onDeleteExperience}
       onChange={props.onChangeExperience}
     />
   ));
+
   return (
     <div className="input-section">
       <div className="section-head">
