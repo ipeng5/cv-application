@@ -1,7 +1,7 @@
 import ExperienceItem from './ExperienceItem';
 
 export default function Experience(props) {
-  const experienceItems = props.experienceData.map(experienceItem => (
+  const experienceItems = props.cvData.experienceData.map(experienceItem => (
     <ExperienceItem key={experienceItem.id} experienceItem={experienceItem} />
   ));
   return (

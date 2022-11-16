@@ -1,7 +1,7 @@
 import InputExperienceItem from './InputExperienceItem';
 
 export default function InputExperience(props) {
-  const experienceItems = props.experienceData.map(experienceItem => (
+  const experienceItems = props.cvData.experienceData.map(experienceItem => (
     <InputExperienceItem
       key={experienceItem.id}
       onDelete={props.onDeleteExperience}

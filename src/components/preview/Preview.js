@@ -7,9 +7,9 @@ import Skills from './Skills';
 export default function Preview(props) {
   return (
     <div className="preview">
-      <Personal personalData={props.personalData} />
+      <Personal cvData={props.cvData} />
       <Skills />
-      <Experience experienceData={props.experienceData} />
+      <Experience cvData={props.cvData} />
       <Education />
     </div>
   );
