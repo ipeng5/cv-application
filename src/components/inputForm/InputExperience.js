@@ -1,8 +1,8 @@
 export default function InputExperience() {
   return (
-    <div className="input-section">
+    <form className="input-section">
       <div className="section-head">
-        <h2>Experience</h2>
+        <h2>Work Experience</h2>
         <button className="btn-add">&#43;&nbsp;&nbsp;Add</button>
       </div>
       <div className="section-head">
@@ -15,6 +15,6 @@ export default function InputExperience() {
         <input type="text" placeholder="To" />
       </div>
       <textarea rows="3" placeholder="Description"></textarea>
-    </div>
+    </form>
   );
 }

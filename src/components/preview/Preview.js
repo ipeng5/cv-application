@@ -4,10 +4,10 @@ import Experience from './Experience';
 import Personal from './Personal';
 import Skills from './Skills';
 
-export default function Preview() {
+export default function Preview(props) {
   return (
     <div className="preview">
-      <Personal />
+      <Personal personalData={props.personalData} />
       <Skills />
       <Experience />
       <Education />

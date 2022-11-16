@@ -1,6 +1,6 @@
 export default function InputSkills() {
   return (
-    <div className="input-section">
+    <form className="input-section">
       <div className="section-head">
         <h2>Skills</h2>
         <button className="btn-add">&#43;&nbsp;&nbsp;Add</button>
@@ -9,6 +9,6 @@ export default function InputSkills() {
         <input type="text" placeholder="Skill" />
         <button className="btn-delete">&#215;</button>
       </div>
-    </div>
+    </form>
   );
 }

@@ -1,14 +1,56 @@
-export default function InputPersonal() {
+export default function InputPersonal(props) {
   return (
-    <div className="input-section">
+    <form className="input-section">
       <h2>Personal details</h2>
-      <input type="text" placeholder="Name" />
-      <input type="text" placeholder="Title" />
-      <input type="text" placeholder="Phone number" />
-      <input type="text" placeholder="Email" />
-      <input type="text" placeholder="Website" />
-      <input type="text" placeholder="LinkedIn" />
-      <textarea rows="3" placeholder="Description"></textarea>
-    </div>
+      <input
+        type="text"
+        name="fullName"
+        placeholder="Name"
+        onChange={e => props.onChange(e)}
+        value={props.personalData.fullName}
+      />
+      <input
+        type="text"
+        name="title"
+        placeholder="Title"
+        onChange={e => props.onChange(e)}
+        value={props.personalData.title}
+      />
+      <input
+        type="text"
+        name="phone"
+        placeholder="Phone number"
+        onChange={e => props.onChange(e)}
+        value={props.personalData.phone}
+      />
+      <input
+        type="text"
+        name="email"
+        placeholder="Email"
+        onChange={e => props.onChange(e)}
+        value={props.personalData.email}
+      />
+      <input
+        type="text"
+        name="website"
+        placeholder="Website"
+        onChange={e => props.onChange(e)}
+        value={props.personalData.website}
+      />
+      <input
+        type="text"
+        name="linkedIn"
+        placeholder="LinkedIn"
+        onChange={e => props.onChange(e)}
+        value={props.personalData.linkedIn}
+      />
+      <textarea
+        rows="3"
+        name="summary"
+        placeholder="Summary"
+        onChange={e => props.onChange(e)}
+        value={props.personalData.summary}
+      />
+    </form>
   );
 }
