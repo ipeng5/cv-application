@@ -1,10 +1,26 @@
 .btn-add,
-.btn-delete {
+.btn-delete,
+.btn-save {
   padding: 6px 12px;
   border-radius: 3px;
   border: none;
   cursor: pointer;
   transition: 0.2s;
+}
+.btn-save {
+  color: var(--color-text-light);
+  background-color: var(--color-btn-bg);
+  font-size: 1.8rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-save img {
+  width: 25px;
+  filter: invert(20%);
 }
 
 .btn-add {
@@ -14,7 +30,8 @@
   font-size: 1.8rem;
   transform: translateX(-4px);
 }
-.btn-add:hover {
+.btn-add:hover,
+.btn-save:hover {
   background-color: var(--color-primary);
 }
 
@@ -58,7 +75,7 @@ textarea {
   color: white;
   display: flex;
   flex-direction: column;
-  padding: 1rem 3rem 6rem 3rem;
+  padding: 3rem 3rem 6rem 3rem;
 }
 
 .input-form h2 {

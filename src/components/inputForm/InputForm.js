@@ -3,10 +3,16 @@ import InputPersonal from './InputPersonal';
 import InputSkills from './InputSkills';
 import InputExperience from './InputExperience';
 import InputEducation from './InputEducation';
+import saveIcon from '../../assets/save.svg';
 
 export default function InputForm(props) {
   return (
     <div className="input-form">
+      <button className="btn-save" onClick={props.onSave}>
+        <img src={saveIcon} alt="save PDF" />
+        Save PDF
+      </button>
+
       <InputPersonal cvData={props.cvData} onChangePersonal={props.onChangePersonal} />
       <InputSkills
         cvData={props.cvData}

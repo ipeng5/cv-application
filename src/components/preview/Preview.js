@@ -6,7 +6,7 @@ import Skills from './Skills';
 
 export default function Preview(props) {
   return (
-    <div className="preview">
+    <div className="preview" ref={props.ainnerRef}>
       <Personal cvData={props.cvData} />
       <Skills cvData={props.cvData} />
       <Experience cvData={props.cvData} />

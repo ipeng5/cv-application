@@ -10,7 +10,7 @@ export default function Personal(props) {
       <div className="info">
         <div className="name">
           <h1>
-            {props.cvData.personalData.fullName ? props.cvData.personalData.fullName : 'first last'}
+            {props.cvData.personalData.fullName ? props.cvData.personalData.fullName : 'Name'}
           </h1>
           <h2>{props.cvData.personalData.title ? props.cvData.personalData.title : 'Headline'}</h2>
         </div>

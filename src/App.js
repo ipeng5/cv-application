@@ -1,7 +1,8 @@
 import InputForm from './components/inputForm/InputForm';
 import Preview from './components/preview/Preview';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { nanoid } from 'nanoid';
+import { useReactToPrint } from 'react-to-print';
 
 function App() {
   const [cvData, setCvData] = useState({
@@ -124,6 +125,12 @@ function App() {
     });
   };
 
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: 'CV',
+  });
+
   return (
     <div className="App">
       <InputForm
@@ -138,8 +145,9 @@ function App() {
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
         onChangeEducation={handleChangeEducation}
+        onSave={handlePrint}
       />
-      <Preview cvData={cvData} />
+      <Preview cvData={cvData} ainnerRef={componentRef} />
     </div>
   );
 }
