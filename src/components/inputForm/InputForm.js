@@ -16,12 +16,16 @@ export default function InputForm(props) {
       />
       <InputExperience
         cvData={props.cvData}
-        experienceData={props.experienceData}
         onAddExperience={props.onAddExperience}
         onDeleteExperience={props.onDeleteExperience}
         onChangeExperience={props.onChangeExperience}
       />
-      <InputEducation />
+      <InputEducation
+        cvData={props.cvData}
+        onAddEducation={props.onAddEducation}
+        onDeleteEducation={props.onDeleteEducation}
+        onChangeEducation={props.onChangeEducation}
+      />
     </div>
   );
 }

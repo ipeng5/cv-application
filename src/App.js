@@ -96,6 +96,34 @@ function App() {
     });
   };
 
+  const handleAddEducation = () => {
+    setCvData(prevCvData => ({
+      ...prevCvData,
+      educationData: [
+        ...prevCvData.educationData,
+        { id: nanoid(), uni: '', subject: '', from: '', to: '' },
+      ],
+    }));
+  };
+
+  const handleDeleteEducation = id => {
+    setCvData(prevCvData => {
+      const updatedEducation = prevCvData.educationData.filter(edu => edu.id !== id);
+      return { ...prevCvData, educationData: updatedEducation };
+    });
+  };
+
+  const handleChangeEducation = (e, id) => {
+    const { name, value } = e.target;
+    setCvData(prevCvData => {
+      const updatedEducation = prevCvData.educationData.map(edu => {
+        if (edu.id === id) return { ...edu, [name]: value };
+        return edu;
+      });
+      return { ...prevCvData, educationData: updatedEducation };
+    });
+  };
+
   return (
     <div className="App">
       <InputForm
@@ -107,6 +135,9 @@ function App() {
         onAddExperience={handleAddExperience}
         onDeleteExperience={handleDeleteExperience}
         onChangeExperience={handleChangeExperience}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
+        onChangeEducation={handleChangeEducation}
       />
       <Preview cvData={cvData} />
     </div>

@@ -6,7 +6,7 @@ export default function Experience(props) {
   ));
   return (
     <div>
-      <h2>Work Experience</h2>
+      {experienceItems.length > 0 && <h2>Work Experience</h2>}
       {experienceItems}
     </div>
   );

@@ -17,40 +17,28 @@ export default function Personal(props) {
         <div className="contact">
           <div className="contact-item">
             <p>
-              {props.cvData.personalData.phone ? props.cvData.personalData.phone : '0123456789'}
+              {props.cvData.personalData.phone ? props.cvData.personalData.phone : 'Phone number'}
             </p>
             <img src={phoneIcon} alt="email" />
           </div>
           <div className="contact-item">
             <p>
-              {props.cvData.personalData.email ? props.cvData.personalData.email : 'abc@abc.com'}
+              {props.cvData.personalData.email ? props.cvData.personalData.email : 'Email address'}
             </p>
             <img src={emailIcon} alt="email" />
           </div>
           <div className="contact-item">
-            <p>
-              {props.cvData.personalData.website
-                ? props.cvData.personalData.website
-                : 'abcdefg.com'}
-            </p>
-            <img src={websiteIcon} alt="website" />
+            <p>{props.cvData.personalData.website}</p>
+            {props.cvData.personalData.website && <img src={websiteIcon} alt="website" />}
           </div>
           <div className="contact-item">
-            <p>
-              {props.cvData.personalData.linkedIn
-                ? props.cvData.personalData.linkedIn
-                : 'linkedin.com/in/abcdefg'}
-            </p>
-            <img src={linkedinIcon} alt="linkedin" />
+            <p>{props.cvData.personalData.linkedIn}</p>
+            {props.cvData.personalData.linkedIn && <img src={linkedinIcon} alt="linkedin" />}
           </div>
         </div>
       </div>
       <div className="summary">
-        <p>
-          {props.cvData.personalData.summary
-            ? props.cvData.personalData.summary
-            : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus incidunt quaerat nobis similique deserunt velit dolores sequi veniam cum accusamus totam possimus natus excepturi id pariatur unde, illo earum sapiente!'}
-        </p>
+        <p>{props.cvData.personalData.summary}</p>
       </div>
     </div>
   );
