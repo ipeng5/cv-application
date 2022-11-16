@@ -12,6 +12,7 @@
   margin-top: 1rem;
   background-color: var(--color-btn-bg);
   font-size: 1.8rem;
+  transform: translateX(-4px);
 }
 .btn-add:hover {
   background-color: var(--color-primary);

@@ -7,9 +7,14 @@ import InputEducation from './InputEducation';
 export default function InputForm(props) {
   return (
     <div className="input-form">
-      <InputPersonal personalData={props.personalData} onChange={props.onChange} />
+      <InputPersonal personalData={props.personalData} onChangePersonnal={props.onChangePersonal} />
       <InputSkills />
-      <InputExperience />
+      <InputExperience
+        experienceData={props.experienceData}
+        onAddExperience={props.onAddExperience}
+        onDeleteExperience={props.onDeleteExperience}
+        onChangeExperience={props.onChangeExperience}
+      />
       <InputEducation />
     </div>
   );

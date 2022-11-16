@@ -9,7 +9,7 @@ export default function Preview(props) {
     <div className="preview">
       <Personal personalData={props.personalData} />
       <Skills />
-      <Experience />
+      <Experience experienceData={props.experienceData} />
       <Education />
     </div>
   );

@@ -9,34 +9,37 @@ export default function Personal(props) {
     <div className="personal">
       <div className="info">
         <div className="name">
-          <h1>{props.personalData.fullName}</h1>
-          <h2>{props.personalData.title}</h2>
+          <h1>{props.personalData.fullName ? props.personalData.fullName : 'first last'}</h1>
+          <h2>{props.personalData.title ? props.personalData.title : 'Headline'}</h2>
         </div>
         <div className="contact">
           <div className="contact-item">
-            <p>{props.personalData.phone}</p>
+            <p>{props.personalData.phone ? props.personalData.phone : '0123456789'}</p>
             <img src={phoneIcon} alt="email" />
           </div>
           <div className="contact-item">
-            <p>abc@gmail.com {props.personalData.email}</p>
+            <p>{props.personalData.email ? props.personalData.email : 'abc@abc.com'}</p>
             <img src={emailIcon} alt="email" />
           </div>
           <div className="contact-item">
-            <p>abcdsig.dev {props.personalData.website}</p>
+            <p>{props.personalData.website ? props.personalData.website : 'abcdefg.com'}</p>
             <img src={websiteIcon} alt="website" />
           </div>
           <div className="contact-item">
-            <p>linkedin.com/in/dgfsd {props.personalData.linkedIn}</p>
+            <p>
+              {props.personalData.linkedIn
+                ? props.personalData.linkedIn
+                : 'linkedin.com/in/abcdefg'}
+            </p>
             <img src={linkedinIcon} alt="linkedin" />
           </div>
         </div>
       </div>
       <div className="summary">
         <p>
-          Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-          incidunt quaerat nobis similique deserunt velit dolores sequi veniam cum accusamus totam
-          possimus natus excepturi id pariatur unde, illo earum sapiente!
-          {props.personalData.summary}
+          {props.personalData.summary
+            ? props.personalData.summary
+            : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus incidunt quaerat nobis similique deserunt velit dolores sequi veniam cum accusamus totam possimus natus excepturi id pariatur unde, illo earum sapiente!'}
         </p>
       </div>
     </div>
