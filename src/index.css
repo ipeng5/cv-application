@@ -8,14 +8,15 @@
 
 :root {
   --color-primary: #1ca186;
-  --color-primary-light: #bae4dc92;
+  --color-primary-2: #28a8df;
+  --color-primary-3: #efa8b9;
   --color-primary-btn: #89ffd7;
+  --color-btn-bg: #518479cc;
   --color-text: #282828;
   --color-text-light: #4e4d4d;
   --color-bg: #333;
-  --color-form-bg: rgb(91, 89, 89);
-  --color-input-bg: rgb(127, 125, 125);
-  --color-btn-bg: #518479cc;
+  --color-form-bg: #5b5959;
+  --color-input-bg: #7f7d7d;
 }
 
 html {
@@ -43,7 +44,7 @@ h2 {
   margin-bottom: 1.5rem;
   margin-top: 2rem;
   display: inline-block;
-  border-bottom: 2px solid var(--color-primary);
+  border-bottom: 2px solid #ccc;
 }
 
 h3 {

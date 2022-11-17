@@ -4,6 +4,7 @@ import InputSkills from './InputSkills';
 import InputExperience from './InputExperience';
 import InputEducation from './InputEducation';
 import saveIcon from '../../assets/save.svg';
+import ThemeSelector from './ThemeSelector';
 
 export default function InputForm(props) {
   return (
@@ -12,7 +13,7 @@ export default function InputForm(props) {
         <img src={saveIcon} alt="save PDF" />
         Save PDF
       </button>
-
+      <ThemeSelector />
       <InputPersonal cvData={props.cvData} onChangePersonal={props.onChangePersonal} />
       <InputSkills
         cvData={props.cvData}

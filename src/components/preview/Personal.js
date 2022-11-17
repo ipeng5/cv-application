@@ -3,13 +3,16 @@ import emailIcon from '../../assets/email.svg';
 import phoneIcon from '../../assets/phone.svg';
 import websiteIcon from '../../assets/website.svg';
 import linkedinIcon from '../../assets/linkedin.svg';
+import { useTheme } from '../../hooks/useTheme';
 
 export default function Personal(props) {
+  const { color } = useTheme();
+
   return (
     <div className="personal">
-      <div className="info">
+      <div className="info" style={{ borderBottom: `3px solid ${color}` }}>
         <div className="name">
-          <h1>
+          <h1 style={{ color: color }}>
             {props.cvData.personalData.fullName ? props.cvData.personalData.fullName : 'Name'}
           </h1>
           <h2>{props.cvData.personalData.title ? props.cvData.personalData.title : 'Headline'}</h2>
