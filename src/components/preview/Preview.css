@@ -16,3 +16,7 @@
 .education-section {
   margin-bottom: 0.8rem;
 }
+
+.date {
+  flex-shrink: 0;
+}

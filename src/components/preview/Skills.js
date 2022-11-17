@@ -10,7 +10,7 @@ export default function Skills(props) {
       <div className="skill-item">
         {props.cvData.skillsData.map(skillItem => (
           <p key={skillItem.id} style={{ backgroundColor: color }}>
-            {skillItem.skill ? skillItem.skill : 'Skill name'}
+            {skillItem.skill ? skillItem.skill : 'Skill'}
           </p>
         ))}
       </div>

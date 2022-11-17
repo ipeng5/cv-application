@@ -5,7 +5,7 @@ export default function ExperienceItem(props) {
         <h3>{props.experienceItem.title ? props.experienceItem.title : 'Job title'}</h3>
         <div className="details">
           <h4>{props.experienceItem.employer ? props.experienceItem.employer : 'Employer'}</h4>
-          <h4>
+          <h4 className="date">
             {props.experienceItem.from} - {props.experienceItem.to}
           </h4>
         </div>
