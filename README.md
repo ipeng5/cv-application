@@ -3,7 +3,7 @@
 A CV Builder that allows users to create their own resume online and download it.
 Personalization with 3 color themes.
 
-[Live Demo](https://ipeng.github.io/cv-application/)
+[Live Demo](https://ipeng5.github.io/cv-application/)
 
 ## Getting started
 
