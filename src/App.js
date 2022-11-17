@@ -15,26 +15,9 @@ function App() {
       linkedIn: '',
       summary: '',
     },
-    skillsData: [{ id: nanoid(), skill: '' }],
-    experienceData: [
-      {
-        id: nanoid(),
-        title: '',
-        employer: '',
-        from: '',
-        to: '',
-        description: '',
-      },
-    ],
-    educationData: [
-      {
-        id: nanoid(),
-        uni: '',
-        subject: '',
-        from: '',
-        to: '',
-      },
-    ],
+    skillsData: [],
+    experienceData: [],
+    educationData: [],
   });
 
   const handleChangePersonal = e => {
@@ -128,7 +111,6 @@ function App() {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
-    documentTitle: 'CV',
   });
 
   return (
@@ -147,7 +129,7 @@ function App() {
         onChangeEducation={handleChangeEducation}
         onSave={handlePrint}
       />
-      <Preview cvData={cvData} ainnerRef={componentRef} />
+      <Preview cvData={cvData} ref={componentRef} />
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function InputExperience(props) {
   return (
     <div className="input-section">
       <div className="section-head">
-        <h2>Work Experience</h2>
+        <h2>Experience</h2>
         <button className="btn-add" onClick={props.onAddExperience}>
           &#43;&nbsp;&nbsp;Add
         </button>
