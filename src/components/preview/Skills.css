@@ -6,8 +6,8 @@
 
 .skill-item p {
   background-color: var(--color-primary-light);
-  padding: 4px 8px;
-  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
   margin: 0;
   color: white;
   opacity: 0.8;
