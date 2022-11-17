@@ -1,8 +1,8 @@
 .btn-add,
 .btn-delete,
 .btn-save {
-  padding: 6px 12px;
-  border-radius: 3px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
   border: none;
   cursor: pointer;
   transition: 0.2s;
@@ -15,11 +15,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .btn-save img {
-  width: 25px;
+  width: 2.5rem;
   filter: invert(20%);
 }
 
@@ -28,7 +28,7 @@
   margin-top: 1rem;
   background-color: var(--color-btn-bg);
   font-size: 1.8rem;
-  transform: translateX(-4px);
+  transform: translateX(-0.4rem);
 }
 .btn-add:hover,
 .btn-save:hover {
@@ -54,9 +54,9 @@ textarea {
   background-color: var(--color-input-bg);
   color: white;
   border: none;
-  border-radius: 5px;
-  margin: 4px;
-  padding: 8px;
+  border-radius: 0.5rem;
+  margin: 0.4rem;
+  padding: 0.8rem;
   outline: none;
   font-size: 1.8rem;
   width: 99%;
@@ -106,4 +106,14 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .input-form {
+    width: 90vw;
+  }
+
+  .section-subhead input:first-child {
+    min-width: 50%;
+  }
 }
